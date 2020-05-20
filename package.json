@@ -1,0 +1,25 @@
+{
+  "name": "safeplaces-rocket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migrate:up": "knex migrate:latest",
+    "migrate:down": "knex migrate:rollback",
+    "lint": "LETS LINT",
+    "start": "node ... ",
+    "test": "NODE_ENV=test knex migrate:latest && mocha --require testSetup.js test/**/*.*"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.21.1",
+    "lodash": "^4.17.15",
+    "mocha": "^7.1.2",
+    "pg": "^8.2.1",
+    "sinon": "^9.0.2"
+  }
+}
