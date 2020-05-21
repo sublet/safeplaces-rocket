@@ -1,5 +1,0 @@
-process.env.NODE_ENV = 'test'
-process.env.DB_HOST = 'localhost'
-process.env.DB_PASS = ''
-process.env.DB_USER = 'jeffreyhunter'
-process.env.DB_NAME = 'safepaths_test'

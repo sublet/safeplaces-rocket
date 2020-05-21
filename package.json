@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "db:init:test": "createdb -h localhost -U safepaths -W safepaths_test",
     "migrate:up": "knex migrate:latest",
     "migrate:down": "knex migrate:rollback",
     "lint": "LETS LINT",
     "start": "node ... ",
-    "test": "NODE_ENV=test knex migrate:latest && mocha --require testSetup.js test/**/*.*"
+    "test": "NODE_ENV=test knex migrate:latest && mocha --require ./test/setup.js test/**/*.test.js"
   },
   "author": "",
   "license": "ISC",

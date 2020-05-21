@@ -1,16 +1,16 @@
-// Update with your config settings.
+require('dotenv')
 
-if (process.env.NODE_ENV === 'test') {
-  require('./testSetup')
-}
+const connInfo = process.env.NODE_ENV === 'test' 
+  ? require('./test/envVars') 
+  : process.env
 
 module.exports = {
   client: 'pg',
   connection: {
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_NAME
+    host: connInfo.DB_HOST,
+    user: connInfo.DB_USER,
+    password: connInfo.DB_PASS,
+    database: connInfo.DB_NAME
   },
   migrations: {
     directory: __dirname + '/db/migrations'
